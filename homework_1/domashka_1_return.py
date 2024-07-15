@@ -19,7 +19,7 @@ def filter_numbers(list_for_filter, filter_type):
             if number_type % 2 == 0:
                 filtered_num.append(number_type)
         return filtered_num
-    if filter_type == 'even':
+    elif filter_type == 'even':
         for number_type in list_for_filter:
             if number_type % 2 != 0:
                 filtered_num.append(number_type)
@@ -28,7 +28,7 @@ def filter_numbers(list_for_filter, filter_type):
         for number_type in list_for_filter:
             if number_type <= 3:
                 filtered_num.append(number_type)
-            if number_type % 2 != 0:
+            elif number_type % 2 != 0:
                 num = 3
                 while num < number_type and number_type % num != 0:
                     num += 1
@@ -41,11 +41,11 @@ def is_prime (list_for_prime, filter_type_for_prime):
     prime_num=[]
     if filter_type_for_prime != 'prime':
         print('Эта функция только для определния простого числа из списка, измените значение парметра на prime')
-    if filter_type_for_prime == 'prime':
+    elif filter_type_for_prime == 'prime':
         for number_type in list_for_prime:
             if number_type <= 3:
                 prime_num.append(number_type)
-            if number_type % 2 != 0:
+            elif number_type % 2 != 0:
                 num = 3
                 while num < number_type and number_type % num != 0:
                     num += 1
